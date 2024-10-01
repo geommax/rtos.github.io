@@ -10,8 +10,19 @@
 1. [FreeRTOS Concepts](#freeRTOS-concepts)
 2. [CMSIS-RTOS API](#CMSIS-RTOS-API)
 3. [Integrating FreeRTOS with CMSIS-RTOS](#integration_with_cmsis_rtos)
-4. [Thread Managements](#thread_managements)
-5. [Inter-Thread Communications](#thread_communication)
+4. [Task Management  Creation deletion  Scheduling](#thread_managements)
+5. [ARM Cortex M Interrupt Priority and  FreeRTOS Task Priority](#interrupt_priority_task_priority)
+6. [Interrupt safe APIs and Thread yielding](#interrupt_safe&task_yield)
+7. [Thread States](#thread_state)
+8. [Importance of Delay APIs](#delay_apis)
+9. [Hook Functions](#hook_func)
+10. [Scheduling Policies](#scheduling_policies)
+11. [Queue Managements](#queues)
+12. [Semaphore for Synchronization mutual exclusion and Interrupt Management](#semaphore_mutex_interrupt)
+13. [Mutex - Mutual Exclusion](#mutex)
+14. [Memory Management on HEAP & STACK](#memmm)
+16. [ARM Cortex M Arch Specific Details](#specific_details)
+17. [Tracing on TraceAnalyzer](#tracer)
 
 <a id="freeRTOS-concepts"></a>
 **1. FreeRTOS Concepts**: Here is the footnote explanation for FreeRTOS Concepts.
