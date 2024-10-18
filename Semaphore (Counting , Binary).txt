@@ -1,0 +1,28 @@
+Semaphore (Counting , Binary)
+
+interrupt01 (sensors data)
+|
+|
+| xSemaKeySendFromInterrupt("interrupt_key")
+|To Task A
+
+
+Task A ရဲ့အလုပ်များ
+=-=-=-=-=-=-=-=-
+bin_sema key01;
+Interrupt01 ရဲ့ "interrupt_key" relase လုပ်မယ့်အချိန်ကိုစောင့်နေတာ)
+Task A (acquired key01) (data ရမှ key01 ကို 
+Task b ကိုပေးမှာဖြစ်တယ်။
+
+Task B (not ok acquire key01) 
+( entered to block state )
+
+|
+|
+|Event Latching (by using bin_sema phore) >> Event Latch ဖြစ်တာကို ရှောင်ရှားဖို့ counting semaphore သုံးကြမယ်။
+|
+|
+|Task C (Priority inversion စဖြစ်နိုင်တယ်။)
+|
+
+SysTickhandler --> TaskA က ကောင် sema key ကို release လုပ်လိုက်ပြီဟေ့။ TaskB ကသိဝါးပီ --->> TaskA ကို TaskB က Preempt (context switching)လုပ်လိုက်တာဖြစ်တယ်။ 
